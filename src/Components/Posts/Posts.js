@@ -8,6 +8,7 @@ import { useHistory } from 'react-router-dom';
 function Posts() {
   const {firebase} = useContext(FirebaseContext)
   const [products, setProducts] = useState([])
+  const [like, setLike] = useState(false)
   const {setPostDetails} = useContext(PostContext)
   const history = useHistory()
   useEffect(() => {
@@ -31,23 +32,25 @@ function Posts() {
         <div className="cards">
         { products.map(product=>{
 
-        return <div className="card" onClick={()=>{
-          setPostDetails(product)
-          history.push('/view')
-        }}>
-            <div className="favorite">
-              <Heart></Heart>
+        return <div className="card" >
+            <div className="favorite" onClick={()=>setLike(!like)}>
+              {like ? <Heart color={'red'}></Heart>: <Heart color={'black'}></Heart>}
             </div>
-            <div className="image">
-              <img src={product.url} alt="" />
-            </div>
-            <div className="content">
-              <p className="rate">&#x20B9; {product.price}</p>
-              <span className="kilometer">{product.category}</span>
-              <p className="name"> {product.name}</p>
-            </div>
-            <div className="date">
-              <span>{product.createdAt}</span>
+            <div onClick={()=>{
+              setPostDetails(product)
+              history.push('/view')
+            }}>
+              <div className="image">
+                <img src={product.url} alt="" />
+              </div>
+              <div className="content">
+                <p className="rate">&#x20B9; {product.price}</p>
+                <span className="kilometer">{product.category}</span>
+                <p className="name"> {product.name}</p>
+              </div>
+              <div className="date">
+                <span>{product.createdAt}</span>
+              </div>
             </div>
           </div>
           })
@@ -63,16 +66,18 @@ function Posts() {
             <div className="favorite">
               <Heart></Heart>
             </div>
-            <div className="image">
-              <img src="../../../Images/R15V3.jpg" alt="" />
-            </div>
-            <div className="content">
-              <p className="rate">&#x20B9; 250000</p>
-              <span className="kilometer">Two Wheeler</span>
-              <p className="name"> YAMAHA R15V3</p>
-            </div>
-            <div className="date">
-              <span>10/5/2021</span>
+            <div className="data">
+              <div className="image">
+                <img src="../../../Images/R15V3.jpg" alt="" />
+              </div>
+              <div className="content">
+                <p className="rate">&#x20B9; 250000</p>
+                <span className="kilometer">Two Wheeler</span>
+                <p className="name"> YAMAHA R15V3</p>
+              </div>
+              <div className="date">
+                <span>10/5/2021</span>
+              </div>
             </div>
           </div>
         </div>

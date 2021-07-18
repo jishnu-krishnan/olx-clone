@@ -1,5 +1,5 @@
 .main{
-    right: 190px;
+    right: 145px;
     top: 60px;
     width: 250px;
     position: absolute;
@@ -22,4 +22,60 @@
     pointer-events: none;
     border: 12px solid transparent;
     border-bottom-color: #fff;
+}
+.pro-img{
+    display: inline-flex;
+}
+.imgg{
+    padding: 15px 8px;
+    align-items: center;
+}
+.profile {
+    width: 100%;
+    align-items: center;
+    padding: 20px 6px 7px 10px;
+    box-sizing: border-box;
+}
+._1863T{
+    padding: 16px;
+    display: block;
+    text-decoration: none;
+}
+.rui-6ayPd{
+    display: flex;
+    align-items: stretch;
+    height: 8px;
+}
+.rui-1EGXF{
+    flex: 1 1 auto;
+    margin-right: 4px;
+    transition: background-color .3s ease-in-out;
+}
+
+.rui-1Z990{
+    background-color: #ffce32;
+}
+.rui-1Z991{
+    background-color: #e2dde1;
+}
+
+
+.rui-38RAu{
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.menu{
+    border-top: 1px solid rgba(0,47,52,.2);
+    padding: 0px 10px 0;
+}
+.menu-items{
+    padding: 10px 10px 0;
+}
+.items{
+    padding: 10px 10px 0;
+    height: 48px;
+}
+.logout{
+    padding: 20px 10px 0;
 }

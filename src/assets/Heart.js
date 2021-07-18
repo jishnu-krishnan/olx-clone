@@ -1,7 +1,20 @@
 import React from 'react'
 
-export default function Heart() {
+export default function Heart(props) {
     return(
+
+      // <div style={{
+      //   margin: 'auto',
+      //   display: 'block',
+      //   width: 'fit-content'
+      // }}>
+      //   <FormControlLabel
+      //     control={<Checkbox icon={<FavoriteBorder />} 
+      //               checkedIcon={<Favorite />}
+      //       name="checkedH" />}
+      //   />
+      // </div>
+
         <svg
         width="24px"
         height="24px"
@@ -9,6 +22,7 @@ export default function Heart() {
         data-aut-id="icon"
         className
         fillRule="evenodd"
+        fill={props.color}
       >
         <path
           className="rui-77aaa"

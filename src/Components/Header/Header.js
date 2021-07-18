@@ -14,13 +14,7 @@ function Header() {
   const {user} = useContext(AuthContext)
   const {firebase} = useContext(FirebaseContext)
   const [viewAcc, setViewAcc] = useState(false)
-  const myAccount=()=>{
-    console.log("hi")
-    // useEffect(() => {
-    //   console.log("mounted")
-    //   //<Account></Account>
-    // })
-  } 
+
   
   return (
     <div className="headerParentDiv">
@@ -51,16 +45,11 @@ function Header() {
         </div>
         
         {user ? <div className="loginPage" onClick={()=>setViewAcc(!viewAcc)} >
-          {`Welcome ${user.displayName}`}
+          Account
+          {/* {`Welcome ${user.displayName}`} */}
           {viewAcc ? <Account></Account> : null} 
         </div>: <Link to='/login'>Login</Link> }
 
-        
-
-        {user && <div className="logout" onClick={()=>{
-          firebase.auth().signOut();
-          history.push('/login')
-        }}>Logout</div>}
         <div className="sellMenu">
           <SellButton></SellButton>
           <div className="sellMenuContent">
