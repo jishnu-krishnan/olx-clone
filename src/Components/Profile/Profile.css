@@ -1,0 +1,57 @@
+.profileMainDiv{
+    display: inline-flex;
+}
+.profileMenu{
+    margin: 16px 35px 24px;
+    padding: 16px 16px 0px;
+    background-color: #fff;
+    cursor: pointer;
+}
+.ADS{
+    font-size: large;
+}
+
+.profileFormDiv{
+    border: 1px solid rgba(0,47,52,.2);
+    margin: 16px 35px 24px;
+    background-color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    max-width: 75%;
+}
+
+.editTitle{
+    padding: 16px 24px;
+    border-bottom: 1px solid rgba(0,47,52,.2);
+}
+
+.formDataDiv{
+    padding: 16px 24px 0;
+}
+
+.textBoxes{
+    padding-bottom: 16px;
+}
+
+.textBoxess{
+    padding-bottom: 16px;
+    display: inline-flex;
+    border-bottom: 1px solid rgba(0,47,52,.2);
+}
+.nameTextbox{
+    width: 500px;
+    margin: 10px;
+    height: 45px;
+}
+
+.aboutTextbox{
+    width: 500px;
+    margin: 10px;
+    height: 85px;
+}
+
+.warningBox{
+    border: 1px solid rgba(0,47,52,.2);
+    margin: 10px;
+    padding: 10px;
+}

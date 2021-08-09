@@ -9,6 +9,7 @@ import View from './Pages/ViewPost'
 import Ads from './Pages/Ads'
 import { AuthContext,FirebaseContext } from './firebase/context';
 import Post from './firebase/postContext'
+import EditProfile from './Pages/EditProfile';
 function App() {
   const {setUser} = useContext(AuthContext)
   const {firebase} = useContext(FirebaseContext)
@@ -27,7 +28,7 @@ function App() {
           <Route path='/sell'><Create/></Route>
           <Route path='/view'><View/></Route>
           <Route path='/ads'><Ads/></Route>
-
+          <Route path='/editProfile/info'><EditProfile/></Route>
         </Router>
       </Post>
     </div>

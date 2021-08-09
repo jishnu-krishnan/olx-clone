@@ -16,7 +16,7 @@ function Account() {
             <div className="profile">
                 <div className="welcome">Hello,</div>
                 <div className="username">{user.displayName}</div>
-                <Link to='/account'>View and edit profile<hr/></Link>
+                <Link to='/editProfile/info'>View and edit profile<hr/></Link>
             </div>
             </div>
             <div>
